@@ -25,20 +25,33 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 function copyToClipboard() {
-  navigator.clipboard.writeText(document.querySelector(".the25thWordField").textContent);
+  navigator.clipboard.writeText("Put your sync code here (-minus the 25th word) " + document.querySelector(".the25thWordField").textContent);
+  alert("Copied!")
 }
 
 </script>
+
+<style>
+	body {
+            background-color: rgb(29, 31, 32);
+			color: #c1bbb3;
+		 }
+
+</style>
+  
 </head>
 
+  
 <body>
+<center>
+<br><br><br>
 <h3>The 25th word for today is:</h3>
 <h1><div class="the25thWordField" style="color:green"></div></h1>
 <h1><div class="errorField" style="color:red"></div></h1>
+<br>
 <button class="copyButton" onclick="copyToClipboard()">Copy to clipboard</button>
-<br/>
-<br/>
-<b>Warning: Brave does not officially support using the Sync code as a backup and you should not rely on this continuing to work in to the future. Use the export functionality in bookmarks and the password manager instead.</b>
+</center>
 </body>
 
+  
 </html>
